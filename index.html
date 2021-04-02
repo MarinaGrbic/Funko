@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funko POP!</title>
+
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+    
+    
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script src="//code.jquery.com/jquery.min.js"></script>
+
+    <script src="jquery.gifplayer.js"></script>
+    
+    <script src="jquery.js"></script> 
+
+</head>
+<body>
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+   
+            <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h2 class="modal-title text-success korpa-naslov">Korpa je prazna</h2>
+                </div>
+                <div class="modal-body">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>br</th>
+                        <th>slika</th>
+                        <th>naziv</th>
+                        <th>cena</th>
+                       
+                      </tr>
+                    </thead>
+                    <tbody id="tabela">
+                    </tbody> 
+                  </table>
+                  <hr>
+                  <p class='text-right'>UKUPNA VREDNOST KORPE - <span id='ukupnaCena'>0.00 RSD</span></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    <div id="root">
+    
+<div class="jumbotron">
+
+    <div class="container text-center">
+       
+      <h1 class="headerh1">Funko POP! Figure</h1> 
+      <br>  
+      
+      <h3>Online Store<small><br><br>Vaše omiljene figure</small></h3>
+
+    </div>
+ </div>
+  
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a href="#" class="navbar-left"><img src="Slike\pop-logo.jpg" ></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+
+        <ul class="nav navbar-nav"> 
+          <li><a href="index.html">Funko</a></li>
+          <li><a href="proizvodi.html">Proizvodi</a></li>
+            </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Korisnik</a></li>
+          <li>
+            <a href="#" data-toggle="modal" data-target="#myModal">
+              <span class="glyphicon glyphicon-shopping-cart"></span> 
+              Korpa
+              <span class="badge" id="brKorpa"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container">    
+    <div class="row proizvodi">      
+    </div>
+  </div><br>
+ 
+  <div class="container">
+  <p class="funko" >Posetite:</p> 
+  <a class="funko"v-on:click.prevent="linkClick" v-bind:href="websajt">www.funko.com</a>
+ 
+  <h4>Vaši podaci:</h4>
+  <label for="ime">Ime</label> <br>
+  <input type="text" v-model="posetilac.ime"> <br>
+  <small>{{errorIme}}</small> 
+  <br>
+  <label for="ime">Email</label> <br>
+  <input type="text" v-model="posetilac.email"> <br>
+  <small>{{errorEmail}}</small><br><br>
+  <input type="submit" value="Potvrdi">
+  <input type="reset" value="Poništi">
+</div>
+
+  <br><br>
+
+  <div class="container">
+  <h4 id="friday">Friday the 13th<small><br>Dodaj boju pomeranjem kursora</small></h4>
+  <br>
+  <div class="row">
+       <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" id="imgblack" src="Slike/Annabelle.jpg" /></div>
+       <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" id="imgblack" src="Slike/jason.jpg" /></div>
+        <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" id="imgblack"src="Slike/nun.jpg" /></div>
+          <div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" id="imgblack" src="Slike/to tell in the dark.jpg" /></div>
+ </div>
+  </div>
+
+  <div class="container">  
+       <h4 class="text-primary">Specijalna ponuda ove nedelje<span class="glyphicon glyphicon-star-empty"></span><br><span class="label label-info">Novo</span></h4> 
+      
+      <ol id="myList">
+          <li  v-for="proizvod in proizvodi"> {{proizvod}}</li>
+      </ol>
+    
+    
+      <p class="text-primary" >Pronađi željeni proizvod iz Specijalne ponude:</p>  
+      <input id="myInput" type="text" placeholder="Search..">
+    </div>
+ <br>
+
+ <div class="container">
+   <div class="table-responsive">
+    <h3 class="text-primary">Pogledajte cene novih proizvoda</h3>
+   
+    <table class="table table-striped">
+      <thead>
+        <tr >
+          <th>Proizvod</th>
+          <th>Cena</th>
+          <th>RSD</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Guns N' Roses</td>
+          <td>3,000.00</td>
+          <td>RSD</td>
+        </tr>
+        <tr>
+          <td>Horror movie/ set</td>
+          <td>6,500.00</td>
+          <td>RSD</td>
+        </tr>
+        <tr>
+          <td>Balrog & Gandalf</td>
+          <td>4,300.00</td>
+          <td>RSD</td>
+        </tr>
+        <tr>
+            <td>Ghostbusters</td>
+            <td>4,800.00</td>
+           <td>RSD</td>
+          </tr>  
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+ <section id="bojaGif">
+     
+    <img class="fixed-ratio-resize" id="margin"src="media\tenor (1).gif">
+  
+  </section>
+<br>
+  
+<br><br><br>
+<div class="alert alert-danger">
+<strong>Akcija!</strong> Još samo danas imate popust za figuru "American Psycho/ Patrick"
+</div>
+</div>
+<br>
+
+
+<div class="container">   
+<p class="stranger">Stranger Things</p>
+<button class="btn btn-primary btn-xs" id="stranger" >Fade-in/Fade-out</button><br><br>
+  <div id="div1" style="width:150px;height:107px;"><img src="Slike\t-funko-demo428_2_.jpg" ></div><br>
+  <div id="div2" style="width:150px;height:107px;"><img src="Slike\eleven.jpg"></div><br>
+  <div id="div3" style="width:150px;height:107px;"><img src="Slike\mike.jpg"></div>
+</div>
+<br>
+  <hr>
+   
+   <h3 class="text-center">The Marvel Cinematic Universe vs DC Comics <small>Funko POP!</small></h3>
+   <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/q9AWFksRViw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <br>
+  <hr>
+
+  <div class="container">
+  <p><mark>Uskoro: Mad Max/ Fury Road</mark></p>
+  <blockquote><p> "Oh, what a day! What a lovely day!"</p></blockquote>
+  <img  class="img-responsive" src="Slike/mad-max-fury-road.png">
+ </div>
+ <br>
+
+<div id="flip">Klikni za obaveštenje</div>
+<div id="panel">Pri kupovini dva proizvoda iz Specijalne ponude, <br>
+  dobijate popust od 30% na bilo koji proizvod iz celokupne ponude.</div>
+<br>
+
+<div class="container">
+    <h5 class="text-uppercase" >Najskuplje Funko POP! Vinil figure za kolekcionare: Top 3</h5>
+    <div class="mySlides">
+      <div class="numbertext">1/3</div>
+        <img src="Slike\Holographic_Darth_Maul_Vinyl_Art_Toys_.jpg" style="width:80%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">2/3</div>
+        <img src="Slike\most w 2.jpg" style="width:80%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">3/3</div>
+        <img src="Slike\most w 3.jpg" style="width:80%">
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  <br>
+<hr>
+
+ <div class="container">   
+
+<div id="night">Promeni temu u NIGHT MODE <br><span 
+class="glyphicon glyphicon-arrow-down"></span></div><br>
+
+<button class="dugme4">GLOW IN THE DARK</button>
+
+</div>
+<br>
+
+<div class="container">
+      <div id="polje1"class="img-thumbnail">
+        <p id="p1"class="text-primary">Pronađite figure </mark>GLOW IN THE DARK</mark>
+           na stranici "Proizvodi" </p>
+      </div>
+    </div>
+</head>
+</div>
+</div>
+  <hr>
+  
+  <footer class="container-fluid text-center">
+    <p>Online Store Copyright</p>  
+    <p>Autor: Marina Grbić</p> 
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <script src="script.js"></script>
+
+  <script src="vue.js"></script>
+   
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funko POP!</title>
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+    <link rel="stylesheet" href="style.css">
+
+    <script src="podaci.js"></script>
+
+    <script src="script.js"></script>
+
+    <script src="vue.js"></script>
+  
+</head>
+<body>
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+  
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title text-success korpa-naslov">Korpa je prazna</h2>
+        </div>
+        <div class="modal-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>br</th>
+                <th>slika</th>
+                <th>naziv</th>
+                <th>cena</th> 
+              </tr>
+            </thead>
+            <tbody id="tabela">
+            </tbody> 
+          </table>
+          <hr>
+          <p class='text-right'>UKUPNA VREDNOST KORPE - <span id='ukupnaCena'>0.00 RSD</span></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="jumbotron">
+    <div class="container text-center">
+
+      <h1 class="headerh1">Funko POP! Figure</h1> 
+      <br>  
+      
+      <h3>Online Store<small><br><br>Vaše omiljene figure</small></h3>
+    </div>
+  </div>
+  
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a href="#" class="navbar-left"><img src="Slike\pop-logo.jpg"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+
+        <ul class="nav navbar-nav">
+          
+          <li><a href="index.html">Funko</a></li>
+          <li><a href="proizvodi.html">Proizvodi</a></li>
+          
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Korisnik</a></li>
+          <li>
+            <a href="#" data-toggle="modal" data-target="#myModal">
+              <span class="glyphicon glyphicon-shopping-cart"></span> 
+              Korpa
+              <span class="badge" id="brKorpa"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container">    
+    <div class="row proizvodi">
+    </div>
+  </div><br>
+  
+  <footer class="container-fluid text-center">
+     
+    <p>Online Store Copyright</p> 
+    <p>Autor: Marina Grbić</p> 
+    
+     
+</body>
+</html>
+
+
+
