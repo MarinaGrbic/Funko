@@ -26,7 +26,7 @@ function ispisProizvoda() {
                         <h1 class='popust'><span class="label label-danger">- ${podaci[i].popust * 100} %</span></h1>
                         <div class="panel-heading">${podaci[i].naziv}</div>
                        
-                        <div class="panel-body"><img src="Slike/${podaci[i].slika}" class="img-responsive" style="width:100%" alt="Image"></div>
+                        <div class="panel-body"><img src=".../Slike/${podaci[i].slika}" class="img-responsive" style="width:100%" alt="Image"></div>
                         <div class="panel-footer">
                             <small class='text-danger'><del>${prikazCene(podaci[i].cena)} RSD</del></small><br>
                             ${prikazCene(podaci[i].cena - podaci[i].cena * podaci[i].popust) } RSD
@@ -43,7 +43,7 @@ function ispisProizvoda() {
                     <div class="panel panel-primary kartica">
                         <div class="panel-heading">${podaci[i].naziv}</div>
                       
-                        <div class="panel-body"><img src="Slike/${podaci[i].slika}" class="img-responsive" style="width:100%" alt="Image"></div>
+                        <div class="panel-body"><img src=".../Slike/${podaci[i].slika}" class="img-responsive" style="width:100%" alt="Image"></div>
                         <div class="panel-footer">
                         <small><del></del></small><br>
                         ${prikazCene(podaci[i].cena)} RSD</div>
@@ -127,7 +127,7 @@ function prikazKorpe() {
             $("#tabela").append(`
                 <tr>
                     <td>${brojac}</td>
-                    <td><img src='Slike/${korpa[i].slika}'></td>
+                    <td><img src='.../Slike/${korpa[i].slika}'></td>
                     <td>${korpa[i].naziv}</td>
                     <td>${prikazCene(cena)}</td>
                     <td>
