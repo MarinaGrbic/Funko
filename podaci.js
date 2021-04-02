@@ -2,10 +2,10 @@ var podaci = [
     {
         id : 1,
         naziv : "Guns N' Roses",
-        cena: 3000, 
-        slika: img="Slike/GNRFunko.jpg",
-            },
-    
+        cena: 3000,
+        slika : "Slike/GNRFunko.jpg",  
+        
+    },
 
     {
         id : 2,
